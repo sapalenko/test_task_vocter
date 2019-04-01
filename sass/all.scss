@@ -114,10 +114,42 @@ body {
 			float: right;
 			width: calc(392px - 98px);
 			padding-left: 16px;
-			padding-right: 82px;
+			padding-right: 20px;
+			position: relative;
+			
+			
+			&:before {
+				content:'';
+				display: block;
+				height: 480px;
+				width: 2px;
+				background: #252e39;
+				position: absolute;
+				margin-top: 21px;
+			}
+			
+			ul {
+				list-style: none;
+				padding-left: 17px;
+			}
 			
 			li {
 				cursor: pointer;
+				color: #252e39;
+				line-height: 31px;
+				text-transform: uppercase;
+				&:before:hover{
+					content:'';
+					display: inline-block;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 15px 12px 15px 0;
+					border-color: transparent #eb5446 transparent transparent;
+				}
+				&:hover {
+					background: #eb5346;
+				}
 			}
 		}
 		
@@ -133,6 +165,7 @@ body {
 			img {
 				max-width: 100%;
 			}
+			
 		}
 		
 		.price-row {
